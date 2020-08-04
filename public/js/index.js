@@ -18,7 +18,7 @@ const bookTour = async tourId => {
     //1) Get the checkout session from API
     const session = await axios({
       method: 'GET',
-      url: `http://127.0.0.1:3000/api/v1/bookings/checkout-session/${tourId}`
+      url: `/api/v1/bookings/checkout-session/${tourId}`
     })
     // console.log(session);
 
@@ -51,7 +51,7 @@ const signup = async(user) => {
     // console.log(name, email, password, passwordConfirm);
     const res = await axios({
       method: 'POST',
-      url: 'http://127.0.0.1:3000/api/v1/users/signup',
+      url: '/api/v1/users/signup',
       data: {
         name,
         email,
@@ -95,7 +95,7 @@ const login = async(email, password) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://127.0.0.1:3000/api/v1/users/login',
+      url: '/api/v1/users/login',
       data: {
         email,
         password
@@ -131,7 +131,7 @@ const logOut = async () => {
   try {
     const res = await axios({
       method: 'GET',
-      url: 'http://127.0.0.1:3000/api/v1/users/logout'
+      url: '/api/v1/users/logout'
     })
 
     if(res.data.status === 'success')
@@ -235,7 +235,7 @@ const updateUserData = async (data) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: 'http://127.0.0.1:3000/api/v1/users/updateMe',
+      url: '/api/v1/users/updateMe',
       data
     });
     if(res.data.status === 'success') {
@@ -267,7 +267,7 @@ const updateUserPassword = async (data) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: 'http://127.0.0.1:3000/api/v1/users/updateMyPassword',
+      url: '/api/v1/users/updateMyPassword',
       data
     });
     if(res.data.status === 'success') {
