@@ -65,7 +65,7 @@ const limiter = rateLimit({
 //To restrict api request
 app.use('/api', limiter);
 
-app.post('webhook-checkout', express.raw({ type: 'application/json' }), bookingController.webhookCheckOut);
+app.post('webhook-checkout', express.raw({ type: 'application/json' }), bookingController.webhookCheckout);
 
 //Used to log the request with nice info in development
 if(process.env.NODE_ENV == 'development')
