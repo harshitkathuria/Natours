@@ -108,8 +108,6 @@ const login = async(email, password) => {
         location.assign('/')
       }, 1500);
     }
-
-    console.log(res);
   }
   catch(err) {
     console.log(err.response.data.message);
@@ -120,7 +118,6 @@ const login = async(email, password) => {
 //Extracting values from loginForm
 if(loginForm) {
   loginForm.addEventListener('submit', e => {
-    console.log('in log in')
     e.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -247,8 +244,6 @@ const updateUserData = async (data) => {
         location.reload(true);
       }, 1500);
     }
-
-    console.log(res);
   }
   catch(err) {
     console.log(err.response.data.message);
@@ -281,8 +276,6 @@ const updateUserPassword = async (data) => {
         location.reload(true);
       }, 1500);
     }
-
-    console.log(res);
   }
   catch(err) {
     console.log(err.response.data.message);

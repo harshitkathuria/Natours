@@ -87,11 +87,11 @@ module.exports = (err, req, res, next) => {
     console.log(err);
 
     if(process.env.NODE_ENV === 'development') {
-        console.log('in dev');
+        // console.log('in dev');
         sendErrorDev(err, req, res);
     }
     else if(process.env.NODE_ENV === 'production') {
-        console.log('in prod')
+        // console.log('in prod')
         let error = {...err};
         error.message = err.message
         //Now the error becomes an appError which has isOperational set to true

@@ -73,8 +73,6 @@ exports.getOne = (Model, populateObj) => catchAsync(async (req, res, next) => {
 
 exports.getAll = Model =>  catchAsync(async (req, res, next) => {
 
-    console.log(req.query);
-
     // GET tour/123gbf/reviews
     //for nested routing of reviews on tour
     let filter = {};

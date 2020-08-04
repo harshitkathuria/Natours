@@ -7,7 +7,6 @@ exports.setUserTourIds = catchAsync(async (req, res, next) => {
   //POST tour/123fcr/reviews
   //POST /reviews
 
-  console.log(req.url);
   if(!req.body.tour)
     req.body.tour = req.params.tourId;
   if(!req.body.user)

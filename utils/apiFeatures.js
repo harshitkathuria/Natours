@@ -16,7 +16,7 @@ class APIFeatures {
         //1B) Advanced Filtering
         let queryStr = JSON.stringify(queryObj);
         queryStr = queryStr.replace(/\b(gte|lte|gt|lt)\b/g, (match => `$${match}`));
-        console.log(JSON.parse(queryStr));
+        // console.log(JSON.parse(queryStr));
 
         //Returns a promise
         //Gives us tour queries tours in a nice json format
