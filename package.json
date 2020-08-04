@@ -4,7 +4,8 @@
   "description": "Learning nodeJS, express and mongoDB",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "debug": "ndb server.js"
   },
   "author": "Harshit Kathuria",
@@ -30,5 +31,8 @@
     "stripe": "^8.81.0",
     "validator": "^13.1.1",
     "xss-clean": "^0.1.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
