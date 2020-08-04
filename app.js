@@ -9,6 +9,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
+const cors = require('cors');
 
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -30,6 +31,16 @@ app.enable('trust proxy');
 app.set('view engine', 'pug');
 //to tell where are templates(called views from MVC) are located 
 app.set('views', path.join(__dirname, 'views'));
+
+//To handle cors (CROSS ORIGIN RESOURCE SHARING)
+app.use(cors());
+//if api is at -> api.natours.com and front-end at -> natours.com and we want to allow only front end to access our api
+// app.use(cors({
+//     origin: 'https://www.natours.com'
+// }))
+
+//HTTP method options comming before non-simple requests
+app.options('*', cors());
 
 //Used to serve static files like html, css, etc
 
