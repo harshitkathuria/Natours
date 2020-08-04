@@ -5,6 +5,8 @@ const bookingController = require('../controller/bookingController');
 
 const router = express.Router();          
 
+router.use(viewsController.alert);
+
 //Overview page
 router.get('/', authController.isLoggedIn, viewsController.getOverview);
 

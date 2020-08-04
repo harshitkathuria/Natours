@@ -8,7 +8,7 @@ html(lang="en")
 
 			link(rel="stylesheet", href="/css/style.css")
 			link(rel="shortcut icon", href="img/favicon.png", type="image/png")
-	body
+	body(data-alert=`${alert ? alert : ''}`)
 		// Header
 		include _header
 

@@ -3,6 +3,14 @@ const User = require("../models/userModel");
 const catchAsync = require('../utils/catchAsync');
 const AppError = require("../utils/appError");
 
+exports.alert = (req, res, next) => {
+    const { alert } = req.query;
+    if(alert === 'booking') {
+        req.locals.alert = "Your booking was successful! If your booking doesn't show up here immediately, please come back later.."
+    }
+    next();
+}
+
 //Render overview page
 exports.getOverview = catchAsync(async (req, res) => {
 
