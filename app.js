@@ -21,6 +21,9 @@ const globalErrorHandler = require('./controller/errorController');
 //Starts express app
 const app = express();
 
+//trust proxy
+app.enable('trust proxy');
+
 // Global Middlewares
 
 //Ude pug as template engine / view engine
