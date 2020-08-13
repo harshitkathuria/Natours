@@ -1350,3 +1350,22 @@ body {
     padding: 0;
   }
 } 
+@media(max-width: 1000px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media(max-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -20px;
+    background-color: #444;
+    padding: 0px 5rem;
+    padding-bottom: 10px;
+    height: 20rem;
+  }
+}
