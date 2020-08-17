@@ -1323,6 +1323,14 @@ body {
   transform: translateY(-2px);
 }
 
+/* .section-cta .cta {
+  display: grid;
+  grid-template-areas: 
+    'cta__img cta__img1 cta__img2'
+    'cta__content cta__content cta__content';
+s} */
+
+/* Responsiveness */
 @media(max-width: 1200px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
@@ -1358,14 +1366,107 @@ body {
     align-items: center;
   }
 }
-@media(max-width: 600px) {
+@media(max-width: 800px) {
   .header {
     display: flex;
     flex-direction: column;
     margin-bottom: -20px;
     background-color: #444;
-    padding: 0px 5rem;
-    padding-bottom: 10px;
+    padding: 5rem 5rem 5rem 5rem;
     height: 20rem;
+    justify-content: center;
+    align-items: center;
   }
+
+  .section-header {
+    height: 134vw;
+  }
+
+  .section-description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-map {
+    display: none;
+  }
+
+  .cta {
+    /* padding: 9rem 5rem 9rem 7rem; */
+    padding: 9rem 2rem 7rem 2rem;
+  }
+
+  .section-cta .cta {
+    display: grid;
+    grid-template-areas: 
+      'cta__img cta__img cta__img'
+      'cta__content cta__content cta__content';
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-cta .cta .cta__img--logo {
+    margin-left: 8rem;
+    grid-area: cta__img;
+  }
+  .section-cta .cta .cta__img--1 {
+    display: none;
+  }
+  .section-cta .cta .cta__img--2 {
+    display: none;
+  }
+  .section-cta .cta .cta__content {
+    padding-left: 20px;
+    margin-top: 10rem;
+    grid-area: cta__content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .section-cta .cta .cta__content .btn {
+    margin-top: 5rem;
+    margin-left: -10px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+@media(max-width: 1400px) {
+  .section-header {
+    height: 60vw;
+  }
+
+  .section-description {
+    height: 105vw;
+  }
+
+  /* .section-cta .cta .cta__img--logo {
+    margin-left: 8rem;
+    grid-area: cta__img;
+  }
+  .section-cta .cta .cta__img--2, 
+  .section-cta .cta .cta__img--3 {
+    margin-left: 8rem;
+  } */
+
+  /* .section-cta .cta .cta__content {
+    padding-left: 20px;
+    margin-top: 10rem;
+    grid-area: cta__content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .section-cta .cta .cta__content .btn {
+    margin-top: 5rem;
+    margin-left: -10px;
+    display: inline-block;
+    text-align: center;
+  } */
 }
